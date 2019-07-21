@@ -7,17 +7,23 @@ body {
 }
 
 .container {
-    border: 5px solid lime;
-    min-height: 50px;
     max-width: 70%;
     margin: 0 auto;
 }
 
 .row {
-    border: 5px solid red;
-    min-height: 50px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.row-align-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .row .row {
@@ -25,8 +31,6 @@ body {
 }
 
 [class*="col-"] {
-    border: 5px solid blue;
-    min-height: 50px;
     width: 100%;
     padding: 10px;
 }
@@ -67,6 +71,12 @@ body {
     }
     .col-12 {
         width: 100%;
+    }
+    .col-first {
+        order: -1;
+    }
+    .col-last {
+        order: 1;
     }
 }
 
@@ -141,6 +151,15 @@ body {
     .col-offset-s-11 {
         margin-left: 91.6666666%;
     }
+    .col-first-s {
+        order: -1;
+    }
+    .col-last-s {
+        order: 1;
+    }
+    .row-reverse-s {
+        flex-direction: row-reverse;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -213,6 +232,15 @@ body {
     }
     .col-offset-m-11 {
         margin-left: 91.6666666%;
+    }
+    .col-first-m {
+        order: -1;
+    }
+    .col-last-m {
+        order: 1;
+    }
+    .row-reverse-m {
+        flex-direction: row-reverse;
     }
 }
 
@@ -287,6 +315,15 @@ body {
     .col-offset-l-11 {
         margin-left: 91.6666666%;
     }
+    .col-first-l {
+        order: -1;
+    }
+    .col-last-l {
+        order: 1;
+    }
+    .row-reverse-l {
+        flex-direction: row-reverse;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -359,5 +396,14 @@ body {
     }
     .col-offset-xl-11 {
         margin-left: 91.6666666%;
+    }
+    .col-first-xl {
+        order: -1;
+    }
+    .col-last-xl {
+        order: 1;
+    }
+    .row-reverse-xl {
+        flex-direction: row-reverse;
     }
 }
